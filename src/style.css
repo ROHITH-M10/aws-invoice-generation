@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #6e95ff;
+    --secondary-color: #ffffff;
+    --tertiary-color: rgb(213, 226, 239);
+}
+
+
+
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+
+}
+.home .home-container{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 0 1px white;
+}
+
+
+.home .home-container .input{
+    flex:1;
+    background-color: var(--secondary-color);
+
+}
+
+.home .home-container .sidebar{
+    flex:1;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .home-container .sidebar .sidebar-container{
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+}
+
+.home .home-container .sidebar .sidebar-container label{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px 100px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #4375ff;
+
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+}
+
+.home .home-container .sidebar .sidebar-container label:hover{
+    background-color: var(--primary-color);
+
+}
+
+.home .home-container .sidebar .sidebar-container span{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.home .home-container .input{
+    padding-top: 20px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+    scrollbar-width: thin;
+    border: 10px solid var(--secondary-color);
+    
+}
+
+
+
+.home .home-container .input .input-container .invoice-top-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--tertiary-color);
+    font-size: 2rem;
+}
+
+.home .home-container .input .input-container .input-container-contain{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+}
+
+.home .home-container .input .input-container label{
+    display:flex;
+    align-items:flex-start;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.home .home-container .input .input-container div{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.home .home-container .input .input-container input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--tertiary-color);
+}
+
+
+.home .home-container .input .input-container #submit{
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #4375ff;
+}
+
+.home .home-container .input .input-container #submit:hover{
+    background-color: var(--primary-color);
+
+}
