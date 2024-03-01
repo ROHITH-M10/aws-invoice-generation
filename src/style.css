@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
+    
 
 }
 .home .home-container{
@@ -34,7 +35,6 @@
 .home .home-container .input{
     flex:1;
     background-color: var(--secondary-color);
-
 }
 
 .home .home-container .sidebar{
@@ -138,4 +138,23 @@
 .home .home-container .input .input-container #submit:hover{
     background-color: var(--primary-color);
 
+}
+
+@media (max-width: 768px){
+    .home .home-container{
+        flex-direction: column-reverse;
+        height: 85vh;
+        width: 90vw;
+    }
+
+    .home .home-container .input{
+        height: 20%;
+        flex: 4;
+    }
+
+    .home .home-container .sidebar{
+        height: 70%;
+        flex: 1;
+
+    }
 }
