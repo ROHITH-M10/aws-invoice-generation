@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
 }
 
 :root{
@@ -88,8 +92,6 @@
     
 }
 
-
-
 .home .home-container .input .input-container .invoice-top-label{
     display: flex;
     justify-content: space-between;
@@ -133,6 +135,7 @@
     cursor: pointer;
     transition: 0.3s;
     background-color: #4375ff;
+    color: var(--secondary-color);
 }
 
 .home .home-container .input .input-container #submit:hover{
