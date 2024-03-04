@@ -143,6 +143,24 @@
 
 }
 
+.home .logout .logout-container{
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+
+}
+.home  .logout .logout-container button{
+    padding: 3px 3px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 1.4rem;
+
+}
+
 @media (max-width: 768px){
     .home .home-container{
         flex-direction: column-reverse;
