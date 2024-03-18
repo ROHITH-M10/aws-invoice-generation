@@ -5,7 +5,12 @@ const Logout = () => {
   return (
     <div className='logout'>
       <div className="logout-container">
-      <button ><i class="fa fa-sign-out"></i></button>
+      <button onClick={() => {
+        localStorage.removeItem('token');
+        window.location.href = '/';
+      }
+      }><i class="fa fa-sign-out"></i></button>
+      
       </div>
     </div>
   );

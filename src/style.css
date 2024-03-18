@@ -88,8 +88,8 @@
     scroll-behavior: smooth;
     scrollbar-color: var(--primary-color) var(--secondary-color);
     scrollbar-width: thin;
-    overflow-x : hidden;
     border: 10px solid var(--secondary-color);
+    overflow-x: hidden;
     
 }
 
@@ -144,15 +144,19 @@
 
 }
 
-.home .logout .logout-container{
+.home .icons-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: absolute;
-    padding: 20px;
-    top: 0;
-    right: 0;
-
+    top: 1rem;
+    right: 1rem;
+    gap: 20px;
 }
-.home  .logout .logout-container button{
-    padding: 3px 3px;
+
+
+.home .icons .icons-container .logout .logout-container button{
+    padding: 3px 10px;
     border-radius: 0.4rem;
     cursor: pointer;
     background-color: var(--secondary-color);
@@ -161,6 +165,123 @@
     font-size: 1.4rem;
 
 }
+
+
+
+.home .icons .icons-container .profile .profile-container button{
+    padding: 3px 10px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 1.4rem;
+
+}
+
+
+.users{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    
+
+}
+
+.users .users-container{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 0 1px white;
+}
+
+.users .users-container .userinfo{
+    flex:1;
+    background-color: var(--secondary-color);
+}
+
+.users .users-container .status{
+    flex:1;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width:none;
+}
+
+
+.users .users-container .userinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.users .users-container .userinfo .userinfo-container .userinfo-avatar i{
+    font-size: 8rem;
+    color: var(--primary-color);
+    display: block;
+    text-align: center;
+}
+
+.users .users-container .userinfo .userinfo-container .userinfo-name{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.users .users-container .status .status-container .status-block{
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+
+}
+
+.users .users-container .status .status-container .status-block .invoice-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.users .users-container .status .status-container .status-block .invoice-info .invoice-number-text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.users .users-container .status .status-container .status-block .invoice-info .invoice-number{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.users .users-container .status .status-container .status-block .invoice-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.users .users-container .status .status-container .status-block .invoice-status .invoice-status-text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.users .users-container .status .status-container .status-block .invoice-status .invoice-status-result{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 
 @media (max-width: 768px){
     .home .home-container{
@@ -179,4 +300,36 @@
         flex: 1;
 
     }
+
+    .users .users-container{
+        flex-direction: column;
+        height: 85vh;
+        width: 90vw;
+    }
+
+    .users .users-container .userinfo{
+        flex: 1;
+        border-bottom: 4px solid var(--primary-color);
+    }
+
+    .users .users-container .status{
+        flex: 5;
+    }
+
+    
+.users .users-container .userinfo .userinfo-container .userinfo-avatar i{
+    font-size: 3rem;
+    color: var(--primary-color);
+    display: block;
+    text-align: center;
+}
+
+.users .users-container .userinfo .userinfo-container .userinfo-name{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+    
+
 }

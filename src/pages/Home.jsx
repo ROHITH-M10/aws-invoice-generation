@@ -1,12 +1,12 @@
 import React from 'react'
 import Sidebar from '../components/sidebar'
 import Input from '../components/input'
-import Logout from '../components/logout'
+import Icons from '../components/icons'
 
 const Home = () => {
   return (
     <div className="home">
-      <Logout/>
+      <Icons />
       <div className="home-container"> 
         <Input />
         <Sidebar />
