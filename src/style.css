@@ -144,7 +144,8 @@
 
 }
 
-.home .icons-container{
+.home .icons-container-home,
+.users .icons-container-profile{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -155,7 +156,8 @@
 }
 
 
-.home .icons .icons-container .logout .logout-container button{
+.home .icons-home .icons-container-home .logout .logout-container button,
+.users .icons-profile .icons-container-profile .logout .logout-container button{
     padding: 3px 10px;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -168,7 +170,8 @@
 
 
 
-.home .icons .icons-container .profile .profile-container button{
+.home .icons-home .icons-container-home .profile .profile-container button,
+.users .icons-profile .icons-container-profile .homenav .homenav-container button{
     padding: 3px 10px;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -179,6 +182,9 @@
 
 }
 
+.users .users-container-small-screen{
+    display: none;
+}
 
 .users{
     height: 100vh;
@@ -187,7 +193,6 @@
     justify-content: center;
     background-color: var(--primary-color);
     
-
 }
 
 .users .users-container{
@@ -216,26 +221,55 @@
 }
 
 
-.users .users-container .userinfo{
+.userinfo-heading{
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+
+}
+.userinfo-details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; 
 }
 
-.users .users-container .userinfo .userinfo-container .userinfo-avatar i{
-    font-size: 8rem;
-    color: var(--primary-color);
-    display: block;
-    text-align: center;
+.userinfo-details label {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
-.users .users-container .userinfo .userinfo-container .userinfo-name{
-    font-size: 2rem;
+.userinfo-details div {
+    font-size: 1.2rem;
     font-weight: 600;
+    padding: 10px;
 }
 
-.users .users-container .status .status-container .status-block{
+.userinfo-details input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--tertiary-color);
+}
+
+.userinfo-details button {
+    border-radius: 0.4rem;
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: #4375ff;
+    color: var(--secondary-color);
+    border: none;
+}
+
+.userinfo-details button:hover {
+    background-color: var(--primary-color);
+    transition: 0.3s;
+}
+
+
+.users .users-container .status .status-container .status-block,
+.users .users-container-small-screen .status .status-container .status-block{
     width: 85%;
     margin: 0 auto;
     background-color: var(--secondary-color);
@@ -248,45 +282,232 @@
 
 }
 
-.users .users-container .status .status-container .status-block .invoice-info{
+.users .users-container .status .status-container .status-block .invoice-info,
+.users .users-container-small-screen .status .status-container .status-block .invoice-info{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 6px;
 }
 
-.users .users-container .status .status-container .status-block .invoice-info .invoice-number-text{
+.users .users-container .status .status-container .status-block .invoice-info .invoice-number-text,
+.users .users-container-small-screen .status .status-container .status-block .invoice-info .invoice-number-text{
     font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
 }
 
-.users .users-container .status .status-container .status-block .invoice-info .invoice-number{
+.users .users-container .status .status-container .status-block .invoice-info .invoice-number,
+.users .users-container-small-screen .status .status-container .status-block .invoice-info .invoice-number{
     font-size: 1rem;
     font-weight: 500;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4px 6px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    letter-spacing: 1.5px;
 }
 
-.users .users-container .status .status-container .status-block .invoice-status{
+
+
+.users .users-container .status .status-container .status-block .invoice-status,
+.users .users-container-small-screen .status .status-container .status-block .invoice-status{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 6px;
+    text-align: center;
+
 }
 
-.users .users-container .status .status-container .status-block .invoice-status .invoice-status-text{
+.users .users-container .status .status-container .status-block .invoice-status .invoice-status-text,
+.users .users-container-small-screen .status .status-container .status-block .invoice-status .invoice-status-text{
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.users .users-container .status .status-container .status-block .invoice-status .invoice-status-result{
+.users .users-container .status .status-container .status-block .invoice-status .invoice-status-result,
+.users .users-container-small-screen .status .status-container .status-block .invoice-status .invoice-status-result{
     font-size: 1rem;
     font-weight: 500;
+    padding: 2px 6px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+}
+
+.verified{
+    background-color: greenyellow;
+}
+
+.pending{
+    background-color: yellow;
+}
+
+.rejected{
+    background-color: red;
+}
+
+
+
+
+.register{
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.register .signup{
+    display: flex;
+    border-radius: 10px;
+}
+.register .signup-box{
+    flex: 1;
+    height: 80vh;
+    background-color: var(--secondary-color);  
+    padding: 80px 80px 150px 100px;
+
+}
+.register .signup-box .header{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.register .signup-box .input-labels{
+    background-color: white;
+    width: 120px; 
+    font-weight:600;
+
+
+}
+
+.register .signup-box .input-boxes {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 8px; 
+    width: 300px;
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 620;
+}
+.register .signup-box .submit-button {
+    padding: 12px;
+    width: 150px;
+    font-weight: 800;
+    border-radius:8px ;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    
+}
+
+.register .art-div{
+    flex: 1;
+    background-color: var(--tertiary-color);
+    height: 80vh;
+    padding: 10px;
+
+    width: 500px;
+}
+
+
+.login{
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login .login-page{
+    display: flex;
+    border-radius: 10px;
+}
+.login .login-page .login-box{
+    flex: 1;
+    height: 80vh;
+    background-color: var(--secondary-color);  
+    padding: 80px 80px 150px 100px;
+
+}
+.login .login-page .login-box .header{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.login .login-page .login-box .description{
+    font-weight: 800;
+    font-size:x-large;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+.login .login-page .login-box .input-labels{
+    background-color: white;
+    width: 120px; 
+    font-weight:600;
+
+
+}
+
+.login .login-page .login-box .input-boxes {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 8px; 
+    width: 300px;
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 620;
+}
+.login .login-page .login-box .submit-button {
+    padding: 12px;
+    width: 150px;
+    font-weight: 800;
+    border-radius:8px ;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-bottom: 10px;    
+}
+
+.login .login-page .login-box .google-label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+
+    
+}
+.login .login-page .login-box .google-button {
+    padding: 12px;
+    width: 150px;
+    font-weight: 800;
+    border-radius:8px ;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 15px;   
+
+}
+
+
+.login .login-page .art-div{
+    flex: 1;
+    display: flex;
+    background-color: var(--tertiary-color);
+    height: 80vh;
+    padding: 10px;
+    width: 500px;
 }
 
 
 @media (max-width: 768px){
     .home .home-container{
         flex-direction: column-reverse;
-        height: 85vh;
+        height: 80vh;
         width: 90vw;
     }
 
@@ -302,33 +523,74 @@
     }
 
     .users .users-container{
+        display: none;
+    }
+
+    .users .users-container-small-screen{
+        display: flex;
         flex-direction: column;
-        height: 85vh;
         width: 90vw;
+        height: 80vh;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        box-shadow: 0 0 1px white;
+        background-color: #ffffff;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
     }
 
-    .users .users-container .userinfo{
+    .users .users-container-small-screen .userinfo{
+        height: 80vh;
+    }
+
+    .users .users-container-small-screen .status{
         flex: 1;
-        border-bottom: 4px solid var(--primary-color);
+        background-color: var(--tertiary-color);
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
     }
 
-    .users .users-container .status{
-        flex: 5;
-    }
-
+    .users .users-container-small-screen .status .status-container .status-block{
+        margin: 0 auto;
+        background-color: var(--secondary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        margin-bottom: 10px;
+        width: 90%;
     
-.users .users-container .userinfo .userinfo-container .userinfo-avatar i{
-    font-size: 3rem;
-    color: var(--primary-color);
-    display: block;
-    text-align: center;
-}
-
-.users .users-container .userinfo .userinfo-container .userinfo-name{
-    font-size: 1rem;
-    font-weight: 600;
-}
-
+    }
+    
+    .users .users-container-small-screen .status .status-container .status-block .invoice-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+    }
+    
+    .users .users-container-small-screen .status .status-container .status-block .invoice-info .invoice-number-text{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .users .users-container-small-screen .status .status-container .status-block .invoice-info .invoice-number{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .users .users-container-small-screen .status .status-container .status-block .invoice-status{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+    }
 
     
 
