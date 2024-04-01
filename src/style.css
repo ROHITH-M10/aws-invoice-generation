@@ -50,37 +50,36 @@
     justify-content: center;
 }
 
-.home .home-container .sidebar .sidebar-container{
-    background-color: var(--secondary-color);
-    border-radius: 0.4rem;
-}
 
-.home .home-container .sidebar .sidebar-container label{
-    display: block;
-    text-align: center;
-    font-weight: 400;
-    padding: 20px 100px;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #4375ff;
 
-    box-shadow: 1px 1px 2px rgb(0, 0, 0);
-
-}
-
-.home .home-container .sidebar .sidebar-container label:hover{
-    background-color: var(--primary-color);
-
-}
-
-.home .home-container .sidebar .sidebar-container span{
-    display: block;
-    text-align: center;
+.home .home-container .sidebar .sidebar-container input[type=file] {
+    width: 350px;
+    max-width: 100%;
+    color: rgb(113, 113, 113);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6rem;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .home .home-container .sidebar .sidebar-container input[type=file]::file-selector-button {
+    margin-right: 20px;
     font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--secondary-color);
+    border: none;
+    background: var(--primary-color); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
 }
+  
+.home .home-container .sidebar .sidebar-container input[type=file]::file-selector-button:hover {
+    background: #4375ff;
+}
+
 
 .home .home-container .input{
     padding-top: 20px;
@@ -222,11 +221,11 @@
 
 
 .userinfo-heading{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: var(--primary-color);
     text-align: center;
-    padding: 10px;
-
+    padding: 15px 0px 0px 0px;
 }
 .userinfo-details {
     display: flex;
@@ -242,7 +241,7 @@
 .userinfo-details div {
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 10px;
+    padding: 8px;
 }
 
 .userinfo-details input {
@@ -256,21 +255,29 @@
 .userinfo-details button {
     border-radius: 0.4rem;
     cursor: pointer;
-    padding: 10px 30px;
+    padding: 12px;
     background-color: #4375ff;
     color: var(--secondary-color);
     border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .userinfo-details button:hover {
     background-color: var(--primary-color);
     transition: 0.3s;
 }
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
 
 
 .users .users-container .status .status-container .status-block,
 .users .users-container-small-screen .status .status-container .status-block{
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     background-color: var(--secondary-color);
     border: 2px solid var(--primary-color);
@@ -281,6 +288,9 @@
     margin-bottom: 10px;
 
 }
+
+
+
 
 .users .users-container .status .status-container .status-block .invoice-info,
 .users .users-container-small-screen .status .status-container .status-block .invoice-info{
@@ -303,11 +313,12 @@
     font-weight: 500;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 4px 6px;
+    padding: 6px 6px;
     text-align: center;
-    border: 1px solid black;
     border-radius: 0.4rem;
     letter-spacing: 1.5px;
+    cursor: pointer;
+    user-select: none;
 }
 
 
@@ -326,28 +337,35 @@
 .users .users-container-small-screen .status .status-container .status-block .invoice-status .invoice-status-text{
     font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
+
 }
 
 .users .users-container .status .status-container .status-block .invoice-status .invoice-status-result,
 .users .users-container-small-screen .status .status-container .status-block .invoice-status .invoice-status-result{
     font-size: 1rem;
-    font-weight: 500;
-    padding: 2px 6px;
+    font-weight: 600;
+    padding: 6px 6px;
     text-align: center;
-    border: 1px solid black;
     border-radius: 0.4rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.verified{
+.Accepted{
     background-color: greenyellow;
+    opacity: 0.8;
 }
 
-.pending{
+.Pending{
     background-color: yellow;
+    opacity: 0.8;
 }
 
-.rejected{
+.Rejected{
     background-color: red;
+    opacity: 0.8;
 }
 
 
@@ -415,92 +433,115 @@
     width: 500px;
 }
 
+/*Login page*/
 
-.login{
+.login {
     background-color: var(--primary-color);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-.login .login-page{
+
+.login .login-page {
     display: flex;
     border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
 }
-.login .login-page .login-box{
+
+.login .login-page .login-box {
     flex: 1;
     height: 80vh;
-    background-color: var(--secondary-color);  
-    padding: 80px 80px 150px 100px;
-
+    background-color: var(--secondary-color);
+    padding: 80px 60px 150px 60px;
 }
-.login .login-page .login-box .header{
+
+.login .login-page .login-box .header {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 15px;
 }
-.login .login-page .login-box .description{
+
+.login .login-page .login-box .description {
     font-weight: 800;
-    font-size:x-large;
+    font-size: x-large;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
-.login .login-page .login-box .input-labels{
+
+.login .login-page .login-box .input-labels {
     background-color: white;
-    width: 120px; 
-    font-weight:600;
-
-
+    width: 120px;
+    font-weight: 600;
 }
 
 .login .login-page .login-box .input-boxes {
     display: flex;
     align-items: center;
     margin-top: 2px;
-    margin-bottom: 8px; 
-    width: 300px;
+    margin-bottom: 8px;
+    width: 90%;
     padding: 6px;
     border-radius: 6px;
     font-weight: 620;
 }
+
 .login .login-page .login-box .submit-button {
     padding: 12px;
-    width: 150px;
+    width: 100%;
+    max-width: 200px;
     font-weight: 800;
-    border-radius:8px ;
+    border-radius: 8px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
-.login .login-page .login-box .google-label {
+/* .login .login-page .login-box .google-label {
     font-weight: 600;
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 100px;
-
-    
 }
+
 .login .login-page .login-box .google-button {
     padding: 12px;
-    width: 150px;
+    width: 100%;
+    max-width: 200px;
     font-weight: 800;
-    border-radius:8px ;
+    border-radius: 8px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    margin-top: 15px;   
+    margin-top: 15px;
+} */
 
-}
-
-
-.login .login-page .art-div{
+.login .login-page .art-div {
     flex: 1;
     display: flex;
     background-color: var(--tertiary-color);
     height: 80vh;
     padding: 10px;
     width: 500px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .login .login-page {
+        flex-direction: column;
+    }
+
+    .login .login-page .login-box {
+        padding: 60px 30px 100px 30px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .login .login-page .art-div {
+        display: none;
+    }
 }
 
 
@@ -595,3 +636,151 @@
     
 
 }
+
+
+/* Dept page */
+
+.dept{
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dept .container {
+    height: 90vh;
+    padding: 40px 80px 80px 80px;
+    background-color: var(--tertiary-color);
+    overflow-y: scroll;
+    border-radius: 20px;
+    
+    width: 1000px;
+  }
+  
+  .dept .container::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+  }
+  
+  .dept .container::-webkit-scrollbar-track {
+    background: var(--secondary-color); /* color of the track */
+  }
+  
+  .dept .container::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar */
+    border-radius: 6px; /* roundness of the scrollbar thumb */
+  }
+  
+  .dept .container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scrollbar thumb on hover */
+  }
+  
+
+.dept .container .header{
+
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.dept .container .list{
+    
+    padding-left: auto;
+    font-weight:850;
+    margin-right: auto;
+}
+
+.dept .container .list .emp-entry{
+    display: flex;
+    margin-top: 50px;
+    border: solid 2px ;
+    border-color: var(--primary-color);
+    padding: 16px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+
+}
+.dept .container .list .emp-entry .emp-details{
+    float: left;
+    width: 50%;
+    
+}
+.dept .container .list .emp-entry .button-container .acc{
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: green;
+    color: var(--secondary-color);
+    font-weight: 700;
+    border-radius: 6px;
+}
+.dept .container .list .emp-entry .button-container .rej{
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: var(--secondary-color);
+    font-weight: 700;
+    border-radius: 6px;
+}
+.dept .container .list .emp-entry .button-container .view{
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 700;
+    border-radius: 6px;
+}
+.dept .container .list .emp-entry .button-container button:hover {
+
+    
+    background-color: var(--secondary-color);
+    color: black;
+    font-weight: 700;  /* Adjust hover color as needed */
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+.dept .container .list .emp-entry .button-container{
+    float: right;
+  width: 50%;
+}
+
+
+.dept .container .overlay{
+
+    justify-content: center;
+}
+
+.dept .overlay button{
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 6px;
+
+}
+.dept .overlay .left{
+    padding: 20px;
+    height: 90vh;
+    background-color: var(--secondary-color);
+}
+.dept .overlay .right{
+    padding: 20px;
+    background-color: var(--tertiary-color);
+    height: 90vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .dept .container .list .emp-entry {
+      display: flex;
+      flex-direction: column;  /* Stack elements vertically on small screens */
+    }
+    .dept .container .list .emp-entry .emp-details,
+    .dept .container .list .emp-entry .button-container {
+      width: 100%;  /* Make elements take full width on small screens */
+    }
+  }
+  

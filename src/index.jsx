@@ -1,9 +1,12 @@
-import React from 'react';
-import App from './App.jsx';
-import { createRoot } from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+import { UserProvider } from "./context/UserContext";
+
+ReactDOM.render(
+  <UserProvider>
     <App />
-  </React.StrictMode>
+  </UserProvider>,
+  document.getElementById("root")
 );

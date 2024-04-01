@@ -1,12 +1,11 @@
 import React from 'react';
-import Signup from '../components/signup';
 
 function Register() {
 
     return (
-        <div className="register">
-        <Signup/>
-      </div>
+        <div>
+        <h1>Register</h1>
+        </div>
     );
 }
 
