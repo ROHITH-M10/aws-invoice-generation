@@ -524,7 +524,10 @@
     background-color: var(--tertiary-color);
     height: 80vh;
     padding: 10px;
-    width: 500px;
+    width: fit-content;
+    background-image: url("https://images.unsplash.com/photo-1633786042135-cb9547757f92?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
 }
 
 /* Media Queries */
@@ -544,7 +547,7 @@
     }
 }
 
-
+/*Users*/
 @media (max-width: 768px){
     .home .home-container{
         flex-direction: column-reverse;
@@ -648,23 +651,45 @@
     align-items: center;
     
 }
+.dept .Logout button{
+        position:absolute;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        border: none;
+        font-size: 1.4rem;
+        
+    
+    
+}
 
 .dept .container {
     height: 90vh;
-    padding: 40px 80px 80px 80px;
-    background-color: var(--tertiary-color);
+    padding: 40px 40px 40px 40px;
+    background-color: var(--secondary-color);
     overflow-y: scroll;
     border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     
     width: 1000px;
   }
   
   .dept .container::-webkit-scrollbar {
     width: 12px; /* width of the scrollbar */
+    
   }
   
   .dept .container::-webkit-scrollbar-track {
-    background: var(--secondary-color); /* color of the track */
+    background: white; /* color of the track */
+    border-radius: 20px;
+    border: solid 2px var(--tertiary-color);
   }
   
   .dept .container::-webkit-scrollbar-thumb {
@@ -679,15 +704,17 @@
 
 .dept .container .header{
 
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 15px;
+
 }
 
 .dept .container .list{
     
     padding-left: auto;
-    font-weight:850;
+    font-weight:580;
     margin-right: auto;
 }
 
@@ -698,7 +725,7 @@
     border-color: var(--primary-color);
     padding: 16px;
     border-radius: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
 
 }
 .dept .container .list .emp-entry .emp-details{
@@ -710,19 +737,22 @@
     padding: 3px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: green;
-    color: var(--secondary-color);
-    font-weight: 700;
+    background-color: lawngreen;
+    color: black;
+    font-weight: 800;
     border-radius: 6px;
+    width: 80px;
+    margin-right: 15px;
 }
 .dept .container .list .emp-entry .button-container .rej{
     padding: 3px;
     border-radius: 5px;
     cursor: pointer;
     background-color: red;
-    color: var(--secondary-color);
-    font-weight: 700;
+    color: black;
+    font-weight: 800;
     border-radius: 6px;
+    width: 80px;
 }
 .dept .container .list .emp-entry .button-container .view{
     padding: 3px;
@@ -732,13 +762,15 @@
     color: var(--secondary-color);
     font-weight: 700;
     border-radius: 6px;
+    float: right;
+    width: 100px;
 }
 .dept .container .list .emp-entry .button-container button:hover {
 
     
     background-color: var(--secondary-color);
     color: black;
-    font-weight: 700;  /* Adjust hover color as needed */
+    font-weight: 700;  
     cursor: pointer;
     border-radius: 6px;
   }
@@ -750,8 +782,17 @@
 
 
 .dept .container .overlay{
-
+    font-size: larger;
+    font-weight: 600;
     justify-content: center;
+
+}
+.dept .container h2{
+    font-weight: 600;
+    font-size:35px;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
 }
 
 .dept .overlay button{
@@ -766,11 +807,14 @@
     padding: 20px;
     height: 90vh;
     background-color: var(--secondary-color);
+    border-radius: 20px;
 }
 .dept .overlay .right{
     padding: 20px;
     background-color: var(--tertiary-color);
     height: 90vh;
+    border-radius: 20px;
+    overflow-y: scroll;
 }
 
 @media only screen and (max-width: 768px) {

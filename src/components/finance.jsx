@@ -59,6 +59,7 @@ const Finance = () => {
   return (
     <div className='container'>
       <h1 className='header'>Finance Overview</h1>
+
       <div className='list'>
         {(invoiceDetails||[]).map((invoice) => (
           <div key={invoice.invoice_id} className="emp-entry"> 
@@ -70,7 +71,7 @@ const Finance = () => {
             <div className="button-container"> 
             <button className="acc" onClick={() => handleAccept(invoice.invoice_id, 1)}>Accept</button>
             <button className="rej" onClick={() => handleAccept(invoice.invoice_id, 0)}>Reject</button>
-            <br/>
+
               <button className="view" onClick={() => handleInvoiceClick(invoice.invoice_id)}>View Details</button>
             </div>
           </div>
