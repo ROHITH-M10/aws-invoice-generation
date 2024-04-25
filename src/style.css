@@ -41,6 +41,10 @@
     background-color: var(--secondary-color);
 }
 
+.invoice-top-label{
+    color: #6e95ff;
+}
+
 .home .home-container .sidebar{
     flex:1;
     background-color: var(--tertiary-color);
@@ -217,6 +221,9 @@
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width:none;
+    border-top: 5px solid var(--tertiary-color);
+    border-bottom: 5px solid var(--tertiary-color);
+
 }
 
 
@@ -230,6 +237,7 @@
 .userinfo-details {
     display: flex;
     flex-direction: column;
+    padding: 0px 10px;
 }
 
 .userinfo-details label {
@@ -246,7 +254,7 @@
 
 .userinfo-details input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     font-size: 1rem;
     border-radius: 0.2rem;
     border: 1px solid var(--tertiary-color);
@@ -261,8 +269,9 @@
     border: none;
     font-size: 1rem;
     font-weight: 400;
-    width: 80%;
-    margin: 0 auto;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .userinfo-details button:hover {
@@ -273,7 +282,14 @@
     display: flex;
     flex-direction: column;
 }
+.user-invoices{
+    width: fit-content;
+    background-color:aquamarine;
+    margin-left: 10px;
+    border-radius: 0.4rem;
 
+
+}
 
 .users .users-container .status .status-container .status-block,
 .users .users-container-small-screen .status .status-container .status-block{
@@ -358,8 +374,8 @@
     opacity: 0.8;
 }
 
-.Pending{
-    background-color: yellow;
+.pending{
+    background-color: rgb(251, 202, 6);
     opacity: 0.8;
 }
 
@@ -424,14 +440,6 @@
     
 }
 
-.register .art-div{
-    flex: 1;
-    background-color: var(--tertiary-color);
-    height: 80vh;
-    padding: 10px;
-
-    width: 500px;
-}
 
 /*Login page*/
 
@@ -439,6 +447,7 @@
     background-color: var(--primary-color);
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -446,7 +455,7 @@
 .login .login-page {
     display: flex;
     border-radius: 10px;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
@@ -456,48 +465,69 @@
     flex: 1;
     height: 80vh;
     background-color: var(--secondary-color);
-    padding: 80px 60px 150px 60px;
+    padding: 30px 40px;
 }
 
 .login .login-page .login-box .header {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--tertiary-color);
+    
 }
 
 .login .login-page .login-box .description {
-    font-weight: 800;
-    font-size: x-large;
-    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
     color: var(--primary-color);
+    text-align: center;
+}
+
+.login .login-page .login-box .login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.login .login-page .login-element{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .login .login-page .login-box .input-labels {
-    background-color: white;
-    width: 120px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 .login .login-page .login-box .input-boxes {
-    display: flex;
-    align-items: center;
-    margin-top: 2px;
-    margin-bottom: 8px;
-    width: 90%;
-    padding: 6px;
-    border-radius: 6px;
-    font-weight: 620;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--tertiary-color);
 }
 
 .login .login-page .login-box .submit-button {
-    padding: 12px;
     width: 100%;
-    max-width: 200px;
-    font-weight: 800;
-    border-radius: 8px;
-    background-color: var(--primary-color);
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #4375ff;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    border: none;
+    width: 60%;
+    margin-bottom:5px;
+}
+
+.login .login-page .login-box .submit-button:hover {
+    background-color: var(--primary-color);
 }
 
 /* .login .login-page .login-box .google-label {
@@ -518,17 +548,6 @@
     margin-top: 15px;
 } */
 
-.login .login-page .art-div {
-    flex: 1;
-    display: flex;
-    background-color: var(--tertiary-color);
-    height: 80vh;
-    padding: 10px;
-    width: fit-content;
-    background-image: url("https://images.unsplash.com/photo-1633786042135-cb9547757f92?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
-    background-position: center;
-}
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
@@ -664,116 +683,126 @@
         color: var(--primary-color);
         border: none;
         font-size: 1.4rem;
-        
-    
     
 }
 
 .dept .container {
-    height: 90vh;
-    padding: 40px 40px 40px 40px;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 0 1px white;
     background-color: var(--secondary-color);
-    overflow-y: scroll;
-    border-radius: 20px;
-    border: solid 2px black;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    
-    width: 1000px;
-  }
+    overflow: scroll;
+    overflow-x: hidden;
+    border-bottom: solid 5px var(--secondary-color);
+    border-top: solid 5px var(--secondary-color);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+}
   
-  .dept .container::-webkit-scrollbar {
-    width: 12px; /* width of the scrollbar */
-    
-  }
-  
-  .dept .container::-webkit-scrollbar-track {
-    background: white; /* color of the track */
-    border-radius: 20px;
-    border: solid 2px var(--tertiary-color);
-  }
-  
-  .dept .container::-webkit-scrollbar-thumb {
-    background: #888; /* color of the scrollbar */
-    border-radius: 6px; /* roundness of the scrollbar thumb */
-  }
-  
-  .dept .container::-webkit-scrollbar-thumb:hover {
-    background: #555; /* color of the scrollbar thumb on hover */
-  }
   
 
 .dept .container .header{
-
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 15px;
-
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--tertiary-color);
+    margin-bottom: 20px;
 }
 
 .dept .container .list{
-    
-    padding-left: auto;
-    font-weight:580;
-    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dept .container .list .emp-entry{
+    width: 90%;
+    margin: 10px;
     display: flex;
-    margin-top: 50px;
-    border: solid 2px ;
+    border: solid 2px var(--primary-color);
     border-color: var(--primary-color);
-    padding: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     background-color: var(--tertiary-color);
+    overflow: hidden;
 
 }
 .dept .container .list .emp-entry .emp-details{
-    float: left;
-    width: 50%;
-    
+    flex : 0.75;
+    background-color:#4375ff;
+    padding: 10px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-right: solid 3px rgb(2, 88, 168);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
-.dept .container .list .emp-entry .button-container .acc{
-    padding: 3px;
+.dept .container .list .emp-entry .button-container{
+    flex:1;
+    background-color:yellow;
+    padding: 10px;
+}
+
+.dept .container .list .emp-entry .button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dept .container .list .emp-entry .button-container button{
+    padding: 15px 25px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: lawngreen;
-    color: black;
-    font-weight: 800;
+    font-weight: 400;
     border-radius: 6px;
-    width: 80px;
-    margin-right: 15px;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.dept .container .list .emp-entry .button-container .acc{
+    background-color: rgb(112, 214, 10);
 }
 .dept .container .list .emp-entry .button-container .rej{
-    padding: 3px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: red;
-    color: black;
-    font-weight: 800;
-    border-radius: 6px;
-    width: 80px;
+    background-color: rgb(233, 51, 51);
 }
 .dept .container .list .emp-entry .button-container .view{
-    padding: 3px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: 700;
-    border-radius: 6px;
-    float: right;
-    width: 100px;
+    background-color:#6e95ff;
 }
-.dept .container .list .emp-entry .button-container button:hover {
 
-    
-    background-color: var(--secondary-color);
-    color: black;
-    font-weight: 700;  
-    cursor: pointer;
-    border-radius: 6px;
-  }
+.dept .container .list .emp-entry .button-container .acc:hover{
+    background-color: rgb(97, 165, 29);
+    transition: 0.3s;
+}
+
+.dept .container .list .emp-entry .button-container .rej:hover{
+    background-color: rgb(255, 0, 0);
+    transition: 0.3s;
+}
+
+.dept .container .list .emp-entry .button-container .view:hover{
+    background-color:#4375ff;
+    transition: 0.3s;
+}
+
+
+
   
 .dept .container .list .emp-entry .button-container{
     float: right;

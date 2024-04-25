@@ -58,7 +58,7 @@ const Finance = () => {
 
   return (
     <div className='container'>
-      <h1 className='header'>Finance Overview</h1>
+      <div className='header'>Finance Overview</div>
 
       <div className='list'>
         {(invoiceDetails||[]).map((invoice) => (
@@ -69,10 +69,9 @@ const Finance = () => {
               <p>Status: {invoice.status}</p>
             </div>
             <div className="button-container"> 
-            <button className="acc" onClick={() => handleAccept(invoice.invoice_id, 1)}>Accept</button>
+            <button className="acc" onClick={() => handleAccept(invoice.invoice_id, 1)}>Approve</button>
             <button className="rej" onClick={() => handleAccept(invoice.invoice_id, 0)}>Reject</button>
-
-              <button className="view" onClick={() => handleInvoiceClick(invoice.invoice_id)}>View Details</button>
+            <button className="view" onClick={() => handleInvoiceClick(invoice.invoice_id)}>View Details</button>
             </div>
           </div>
         ))}

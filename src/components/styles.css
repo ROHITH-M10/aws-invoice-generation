@@ -11,6 +11,27 @@
     justify-content: center;
     align-items: center;
   }
+
+  .overlay .left h2{
+    padding: 5px;
+    text-decoration: underline;
+  }
+  .overlay .left {
+    color:#6e95ff;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .overlay .left p{
+    padding: 5px;
+    font-size: 1.4rem;
+  }
+
+  .overlay .right{
+    color: #6e95ff;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
   
   .loader {
     border: 8px solid #f3f3f3;

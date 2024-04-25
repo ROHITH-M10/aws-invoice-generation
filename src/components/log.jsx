@@ -47,67 +47,53 @@ const Log = () => {
   };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   return (
     <div className='login-page'>
       <div className='login-box'>
         <div className='header'>Login</div>
         <form onSubmit={handleSubmit}>
           <div className='description'>Welcome back!</div>
-          <label className='input-labels'>User ID</label>
-          <br />
-          <input
-            className='input-boxes'
-            type='email'
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)}
-            name='user_id'
-            placeholder='example: abcd@efgh.com'
-            required
-          />
-          <br />
-          <label className='input-labels'>Password</label>
-          <br />
-          <input
-            className='input-boxes'
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name='password'
-            placeholder='********'
-            required
-          />
-          <br />
-          <label className='input-labels'>Role</label>
-          <br />
-          <select className='input-boxes' name='role' required onChange={(e) => setRole(e.target.value)}>
-            <option value=''>Select Role</option>
-            <option value='admin'>Finance Dept. Member</option>
-            <option value='user'>Employee</option>
-          </select>
-          <br />
-          <input className='submit-button' type='submit' value='Submit' />
-          <br/>
+          <div className="login-field">
+
+            <div className="login-element">
+              <label className='input-labels'>User ID</label>
+              <input
+                className='input-boxes'
+                type='email'
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+                name='user_id'
+                placeholder='abcd@efgh.com'
+                required
+              />
+              
+            <label className='input-labels'>Password</label>
+            <input
+              className='input-boxes'
+              type='password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              name='password'
+              placeholder=''
+              required
+            />
+
+            <label className='input-labels'>Role</label>
+            <select className='input-boxes' name='role' required onChange={(e) => setRole(e.target.value)}>
+              <option value=''>Select Role</option>
+              <option value='admin'>Finance Dept. Member</option>
+              <option value='user'>Employee</option>
+            </select>
+            </div>
+            
+            
+            <input className='submit-button' type='submit' value='Submit' />
+
+          </div>
             <ErrorMessage message = {errorMessage}></ErrorMessage>
         </form>
       </div>
-      <div className='art-div'></div>
     </div>
   );
 };
