@@ -751,7 +751,7 @@
 }
 .dept .container .list .emp-entry .button-container{
     flex:1;
-    background-color:yellow;
+    background-color:rgb(209, 225, 255);
     padding: 10px;
 }
 
