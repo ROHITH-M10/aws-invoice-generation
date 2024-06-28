@@ -19,3 +19,13 @@ As the services might be inactivity while non usage kindly wait for few mins aft
 Note:
 
 You dont have to worry about the backend as everything is hosted in separate instances and been used as APIs here following microarchitecture services 
+
+
+## Contributors
+
+- Barath Kumar J
+- Rohith M
+- Harish T.S
+- Guhanesh G
+- Ajayraj M
+- Adhvaith Sankar
